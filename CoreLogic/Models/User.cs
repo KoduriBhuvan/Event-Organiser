@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace CoreLogic.Models
 {
-    internal class User
+    public class User
     {
-    }
+		public User() => Events = new HashSet<Events>();
+		public int Id { get; set; }
+		public string Name { get; set; }
+		public string City { get;  set; }
+		public string Email { get; set; }
+		public ICollection<Events> Events { get; set; }
+	}
 }

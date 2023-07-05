@@ -1,0 +1,46 @@
+﻿@page
+@model WebApp.Pages.UserModel
+
+
+@{
+}
+<div class="text-center">
+	<table class="table table-bordered table-striped">
+		<thead>
+			<tr>
+				<th>
+					Name
+				</th>
+				<th>
+					City
+				</th>
+				<th>
+					Email
+				</th>
+
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var obj in Model.user)
+			{
+				<tr>
+					<th>
+						@obj.Name
+					</th>
+					<th>
+						@obj.City
+					</th>
+					<th>
+						@obj.Email
+					</th>
+					<th>
+						<a href="/events?userId=@Model.UserId">Events</a>
+
+					</th>
+
+
+				</tr>
+			}
+		</tbody>
+	</table>
+</div>

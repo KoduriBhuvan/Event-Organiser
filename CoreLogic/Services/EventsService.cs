@@ -8,15 +8,16 @@ using System.Threading.Tasks;
 
 namespace CoreLogic.Services
 {
-    public class UserService
-    {
-        public List<User> GetAll()
-        {
+	public class EventsService
+	{
+		
+		public List<Events> GetAllEventDetails()
+		{
 			MyContext ctx = new MyContext();
 
-			var users = ctx.User.ToList();
-			return users;
+			var events = ctx.Events.ToList();
+			return events;
 		}
-
-    }
+		
+	}
 }

@@ -1,0 +1,40 @@
+﻿@page
+@model WebApp.Pages.EventsModel
+@{
+}
+
+<div class="text-center">
+	<table class="table table-bordered table-striped">
+		<thead>
+			<tr>
+				<th>
+					EventType
+				</th>
+				<th>
+					Venue
+				</th>
+				<th>
+					NoofGuest
+				</th>
+				
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var obj in Model.events)
+			{
+				<tr>
+					<th>
+						@obj.Event_Type
+					</th>
+					<th>
+						@obj.Venue
+					</th>
+					<th>
+						@obj.Noof_Guests
+					</th>
+				</tr>
+			}
+		</tbody>
+	</table>
+</div>
+
